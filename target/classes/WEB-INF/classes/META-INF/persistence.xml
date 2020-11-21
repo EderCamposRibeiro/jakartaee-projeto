@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<persistence>
+	<persistence-unit name="AgendamentoEmailDS">
+		<jta-data-source>java:/AgendamentoEmailDS</jta-data-source>
+		<!-- A tag "jta-data-source" é utilizada para declarar qual "datasource" 
+			configurado no servidor de aplicação será utilizado pela conexão no Banco 
+			de Dados -->
+	</persistence-unit>
+</persistence>
