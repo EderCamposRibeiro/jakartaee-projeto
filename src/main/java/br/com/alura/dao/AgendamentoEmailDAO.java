@@ -26,4 +26,14 @@ public class AgendamentoEmailDAO {
 		entityManager.persist(agendamentoEmail);
 	}
 	
+	public List<AgendamentoEmail> listarPorNaoAgendado(){
+		return entityManager.
+				createQuery("SELECT ae FROM AgendamentoEmail ae WHERE ae.agendado = false",
+						AgendamentoEmail.class).getResultList();
+	}
+	
+	public void alterar(AgendamentoEmail agendamentoEmail) {
+		entityManager.merge(agendamentoEmail);
+	}
+	
 }
